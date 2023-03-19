@@ -13,22 +13,6 @@ import random
 import shutil
 
 
-! pip install -q kaggle
-
-!mkdir ~/kaggle
-
-! cp kaggle.json ~/.kaggle/
-
-! chmod 600 ~/.kaggle/kaggle.json
-
-# Create directories to store the training, testing and validation data respectively
-!mkdir train
-!mkdir test
-!mkdir valid
-
-# Downloading the RLVS dataset
-!kaggle datasets download mohamedmustafa/real-life-violence-situations-dataset -p /content/ --unzip
-
 # Get the video names of violence and non-violence
 non_violent=os.listdir("/content/Real Life Violence Dataset/NonViolence")
 violent=os.listdir("/content/Real Life Violence Dataset/Violence")
